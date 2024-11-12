@@ -10,8 +10,7 @@ SET time_zone = "+00:00";
 
 SET NAMES utf8mb4;
 
--- Eliminar la base de datos si existe
-DROP DATABASE IF EXISTS `uriarte`;
+
 
 -- Crear base de datos: `uriarte`
 CREATE DATABASE IF NOT EXISTS `uriarte` 
