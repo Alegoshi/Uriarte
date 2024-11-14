@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const id = localStorage.getItem('patient'); // Obtenemos el id guardado en localStorage
     console.log('SCRIPT LOAD ID: ' + id);
 
-    fetch(`http://localhost:3000/paciente/${id}`)
+    fetch(`http://cmuclinic.online/paciente/${id}`)
       .then(response => response.json())
       .then(data => {
         if (data.message === 'Informacion obtenida') {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function showAnotacionesPatient(id) {
     console.log('FUNCION ID: ' + id);
     // Usamos FETCH para hacer la petición con la ruta definida
-    fetch(`http://localhost:3000/consulta/anotaciones/${id}`)
+    fetch(`http://cmuclinic.online/consulta/anotaciones/${id}`)
       .then(response => response.json())
       .then(data => {
         // Verificamos si se obtuvieron los datos

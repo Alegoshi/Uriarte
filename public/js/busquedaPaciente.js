@@ -38,7 +38,7 @@ function openLockModal(id, estado) {
     // if (confirm('Esta seguro que desea eliminar el paciente?')) {
       const id = localStorage.getItem('modPacienteID');
   
-      fetch(`http://localhost:3000/paciente/${id}`, {
+      fetch(`http://cmuclinic.online/paciente/${id}`, {
         method: 'DELETE',
       })
       .then(response => response.json())
@@ -70,7 +70,7 @@ function openLockModal(id, estado) {
   function habilitarPaciente() {
     const id = localStorage.getItem('modPacienteID');
   
-      fetch(`http://localhost:3000/paciente/estado/${id}`, {
+      fetch(`http://cmuclinic.online/paciente/estado/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -98,7 +98,7 @@ function openLockModal(id, estado) {
   function deshabilitarPaciente() {
     const id = localStorage.getItem('modPacienteID');
   
-      fetch(`http://localhost:3000/paciente/estado/${id}`, {
+      fetch(`http://cmuclinic.online/paciente/estado/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -167,7 +167,7 @@ function openLockModal(id, estado) {
   // funcion para cargar la informacion de los pacientes
   function loadTableInformation() {
     // Utilizamos el FETCH con la ruta definida para obtener los datos de los pacientes
-    fetch('http://localhost:3000/paciente/listado')
+    fetch('http://cmuclinic.online/paciente/listado')
     .then(response => response.json())
     .then(data => {
       if (data.message === '+') { // Verificamos que nos devolvio la informacion
@@ -214,7 +214,7 @@ function openLockModal(id, estado) {
   // Funcion para buscar pacientes
   function searchPatients(query) {
     // Utilizamos el FETCH para hacer la peticion al back con la busqueda deseada utilizando la ruta definida
-    fetch(`http://localhost:3000/paciente/busqueda/${query}`)
+    fetch(`http://cmuclinic.online/paciente/busqueda/${query}`)
     .then(response => response.json())
     .then(data => {
       // Verificamos que nos devuelva los datos buscados
@@ -274,7 +274,7 @@ function openLockModal(id, estado) {
     }
 
     if (estado !== 'todo') {
-      fetch(`http://localhost:3000/pacientes/${estado}`)
+      fetch(`http://cmuclinic.online/pacientes/${estado}`)
       .then(response => response.json())
       .then(data => {
         if (data.message === 'Informacion obtenida') {
@@ -283,7 +283,7 @@ function openLockModal(id, estado) {
       })
       .catch(error => console.error('Error al buscar pacientes: ', error));
     } else {
-      fetch('http://localhost:3000/paciente/listado')
+      fetch('http://cmuclinic.online/paciente/listado')
       .then(response => response.json())
       .then(data => {
         if (data.message === '+') {
@@ -297,7 +297,7 @@ function openLockModal(id, estado) {
   // Funcion para abrir el modal de edicion de datos
   function openModal(id) {
     // Utilizamos el FETCH para hacer la peticion con la ruta definida y el id del paciente a modificar
-    fetch(`http://localhost:3000/paciente/${id}`)
+    fetch(`http://cmuclinic.online/paciente/${id}`)
     .then(response => response.json())
     .then(data => {
       // Verificamos la devolucion de la informacion del paciente
@@ -336,7 +336,7 @@ function openLockModal(id, estado) {
     }
 
     // Utilizamos el FETCH con la ruta definida para hacer la peticion
-    fetch(`http://localhost:3000/paciente/${id}`, {
+    fetch(`http://cmuclinic.online/paciente/${id}`, {
       method: 'PUT', // Usamos el metodo PUT para modificar los datos
       headers: {
         'Content-Type': 'application/json'
@@ -389,7 +389,7 @@ function showPatientDetails(id) {
   }
 
   // Usamos FETCH para hacer la petición con la ruta definida
-  fetch(`http://localhost:3000/patient/details/${id}`)
+  fetch(`http://cmuclinic.online/patient/details/${id}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok ' + response.statusText);

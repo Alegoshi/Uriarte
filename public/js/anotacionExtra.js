@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function searchPatients(query) {
-    fetch(`http://localhost:3000/paciente/busqueda/${query}`)
+    fetch(`http://cmuclinic.online/paciente/busqueda/${query}`)
     .then(response => response.json())
     .then(data => {
       if (data.message === 'Datos obtenidos') {
@@ -53,7 +53,7 @@ function searchPatients(query) {
 function obtenerInfoPaciente(id) {
     let paciente;
 
-    fetch(`http://localhost:3000/paciente/${id}`)
+    fetch(`http://cmuclinic.online/paciente/${id}`)
     .then(response => response.json())
     .then(data => {
         if (data.message === 'Informacion obtenida') {
@@ -74,7 +74,7 @@ function guardarContinuar() {
         return;
     }
 
-    fetch('http://localhost:3000/anotacion', {
+    fetch('http://cmuclinic.online/anotacion', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ function guardarSalir() {
     }
 
     // Utilizamos el FETCH para hacer la peticion al back con la ruta definida
-    fetch('http://localhost:3000/anotacion', {
+    fetch('http://cmuclinic.online/anotacion', {
         method: 'POST', // Usamos el metodo POST para enviar los datos
         headers: {
             'Content-Type': 'application/json'
