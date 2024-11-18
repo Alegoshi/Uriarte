@@ -53,7 +53,7 @@ body {
       
       tr:hover {
         /* background-color: rgba(0, 0, 0, 0.062); */
-        background-color: #ecb8b8;
+        background-color: #c494f1;
       }
 
       .sort-icons {
@@ -94,7 +94,7 @@ body {
       }
     
     .btn-blue {
-      background-color: #3490dc;
+      background-color: #98cbf5;
       color: rgb(12, 12, 12);
       padding: 10px 20px;
       border: none;
@@ -104,12 +104,18 @@ body {
       font-weight: bold;
       transition: background-color 0.3s;
     }
+    .btn-blue:hover {
+      background-color: #feffff; /* Cambia de color  al pasar el mouse */
+    }
     .btn-green {
-      background-color: #38c172;
+      background-color: #82c1f5;
       color: rgb(14, 13, 13);
     }
+    .btn-green:hover {
+      background-color: #feffff; /* Cambia de color  al pasar el mouse */
+    }
     .btn-yellow {
-      background-color: #f6e05e;
+      background-color: #6cb9f8;
       color: rgb(20, 20, 20);
       padding: 10px 20px;
       border: none;
@@ -118,6 +124,9 @@ body {
       font-size: 14px;
       font-weight: bold;
       transition: background-color 0.3s;
+    }
+    .btn-yellow:hover {
+      background-color: #feffff; /* Cambia de color  al pasar el mouse */
     }
     .btn-return {
         padding: 10px 20px; /* Ajuste de tamaño igual a los otros botones */
@@ -130,11 +139,12 @@ body {
         font-weight: bold;
         transition: background-color 0.3s;
       }
+     
       .btn-return:hover {
         opacity: 0.8;
       }
       .btn-pink {
-        background-color: #eb5cbb;
+        background-color: #148bec;
         color: rgb(12, 12, 12);
         padding: 10px 20px;
         border: none;
@@ -143,6 +153,9 @@ body {
         font-size: 14px;
         font-weight: bold;
         transition: background-color 0.3s;
+      }
+      .btn-pink:hover {
+        background-color: #feffff; /* Cambia de color  al pasar el mouse */
       }
       /* Estilos para el modal */
       .modal {
@@ -316,11 +329,11 @@ h2 {
 
 /* Estilo para el botón "Datos Paciente" */
 .btn-purple {
-  background-color: #b391f3; /* Color violeta */
+  background-color: #2a9af7; /* Color violeta */
 }
 
 .btn-purple:hover {
-  background-color: #ccb5fc; /* Color violeta más oscuro al pasar el mouse */
+  background-color: #feffff; /* Color violeta más oscuro al pasar el mouse */
 }
 .sort-icons {
   cursor: pointer;
@@ -374,7 +387,7 @@ h2 {
 }
 
 .dropbtn {
-  background-color: #38ac38;
+  background-color: #277477;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -403,7 +416,7 @@ h2 {
 }
 
 .dropdown-content a:hover {
-  background-color: #e99999;
+  background-color: #99e9e2;
 }
 
 .btn-red {

@@ -36,7 +36,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 
     // Lógica para guardar los datos
     // Utilizamos el FETCH para hacer la peticion al back con la ruta especificada
-    fetch('http://cmuclinic.online/registro', {
+    fetch('http://localhost:3000/registro', {
         method: 'POST', // Utilizamos el metodo POST para enviar los datos y cargarlos
         headers: {
             'Content-Type': 'application/json',

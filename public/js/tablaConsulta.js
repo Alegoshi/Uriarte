@@ -6,7 +6,7 @@ let apellidoNombre = '';
       var idP = localStorage.getItem('patientID'); // Obtenemos el id guardado en localStorage
       document.getElementById('idPatient').value = idP; // Cargamos los datos en el campo correspondiente del formulario
 
-      fetch(`http://cmuclinic.online/paciente/${idP}`)
+      fetch(`http://localhost:3000/paciente/${idP}`)
       .then(response => response.json())
       .then(data => {
         if (data.message === 'Informacion obtenida') {
@@ -45,7 +45,7 @@ let apellidoNombre = '';
       }
 
       // Utilizamos el FETCH para hacer la peticion al back con la ruta definida
-      fetch('http://cmuclinic.online/paciente/consulta', {
+      fetch('http://localhost:3000/paciente/consulta', {
         method: 'POST', // Usamos el metodo POST para enviar los datos
         headers: {
           'Content-Type': 'application/json'

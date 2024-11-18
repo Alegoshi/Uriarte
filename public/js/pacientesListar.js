@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // funcion para cargar la informacion de los pacientes
 function loadTableInformation() {
     // Utilizamos el FETCH con la ruta definida para obtener los datos de los pacientes
-    fetch('http://cmuclinic.online/paciente/listado')
+    fetch('/paciente/listado')
         .then(response => response.json())
         .then(data => {
             if (data.message === '+') { // Verificamos que nos devolvio la informacion

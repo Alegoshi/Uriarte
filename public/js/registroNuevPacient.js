@@ -26,7 +26,7 @@ function handleFormSubmit(event) {
 
   // Lógica para guardar los datos
   // Utilizamos el FETCH con la ruta definida para hacer la peticion
-  fetch('http://cmuclinic.online/paciente/registrar', {
+  fetch('http://localhost:3000/paciente/registrar', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

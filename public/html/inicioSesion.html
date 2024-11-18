@@ -23,26 +23,12 @@
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required>
             <div id="loginError" class="error-message"></div>
-            <div class="buttons">
-                <a href="register" class="button-link">Registrarse</a>
+            <div class="buttons-login">
                 <button type="submit">Ingresar</button>
             </div>
-            <div class="forgot-password">
-                <a href="#" id="forgot-password">¿Olvidaste tu contraseña?</a>
-            </div>
+            
         </form>
     </div>
-
-<!-- Ventana emergente -->
-<div id="passwordPopup" class="popup">
-    <div class="popup-content">
-        <span class="close" id="closePopup">&times;</span>
-        <h3>Recuperar contraseña</h3>
-        <label for="email"><b>Correo electrónico</b></label>
-        <input type="email" placeholder="Colocar el mail" name="email" id="email" required>
-        <button class="btn" id="recoverPasswordBtn">Buscar</button>
-    </div>
-</div>
 
 <script src="../js/inicioSesion.js"></script>
 </body>

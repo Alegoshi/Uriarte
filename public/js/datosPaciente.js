@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Usamos FETCH para hacer la petición con la ruta definida
-    fetch(`http://cmuclinic.online/paciente/${id}`) // Hacemos la petición al backend
+    fetch(`http://localhost:3000/paciente/${id}`) // Hacemos la petición al backend
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);

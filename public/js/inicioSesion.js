@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Lógica para validar los datos
     // Utilizamos el FETCH para hacer la peticion al back de NodeJS con la ruta definida
-    fetch('http://cmuclinic.online/login', {
+    fetch('http://localhost:3000/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ document.getElementById("recoverPasswordBtn").addEventListener("click", function
     var email = document.getElementById("email").value;
 
     // Lógica para enviar el correo de recuperación de contraseña
-    fetch('http://cmuclinic.online/auth/recover', {
+    fetch('http://localhost:3000/auth/recover', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

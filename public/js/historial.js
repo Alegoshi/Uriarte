@@ -5,7 +5,7 @@ let apellidoNombre = '';
 document.addEventListener('DOMContentLoaded', function() {
     const id = localStorage.getItem('patientID'); // Obtenemos el id guardado en localStorage
 
-    fetch(`http://cmuclinic.online/paciente/${id}`)
+    fetch(`http://localhost:3000/paciente/${id}`)
       .then(response => response.json())
       .then(data => {
         if (data.message === 'Informacion obtenida') {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Función para mostrar el historial de un paciente
   function showHistorialPatient(id) {
     // Usamos FETCH para hacer la petición con la ruta definida
-    fetch(`http://cmuclinic.online/paciente/historico/${id}`)
+    fetch(`http://localhost:3000/paciente/historico/${id}`)
       .then(response => response.json())
       .then(data => {
         // Verificamos si se obtuvieron los datos

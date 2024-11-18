@@ -46,10 +46,13 @@ input {
     border-radius: 5px;
 }
 
-.buttons {
+.buttons-login {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center;     /* Centra verticalmente si es necesario */
+    margin: 0 auto;          /* Centra el contenedor si tiene un ancho fijo */
+    width: 100%;             /* Asegura que el contenedor ocupe todo el ancho */
+    height: 100px;           /* Ajusta la altura según sea necesario */
 }
 
 button, .button-link {
@@ -58,14 +61,16 @@ button, .button-link {
     border-radius: 5px;
     cursor: pointer;
     background-color: #38b0d8; /* Color de fondo */
-    color: white; /* Color del texto */
-    text-decoration: none; /* Quitar subrayado para el enlace */
+    color: white;             /* Color del texto */
+    text-decoration: none;    /* Quitar subrayado para el enlace */
     transition: background-color 0.3s; /* Transición suave del color de fondo */
 }
 
 button:hover, .button-link:hover {
     background-color: #79b3ce; /* Color de fondo al pasar el ratón */
 }
+
+ 
 
 .image-container {
     text-align: center;

@@ -81,9 +81,13 @@
         min-width: fit-content;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
-        top: -150px;
+        top: -145px;
       }
   
+      #enviarDropdown {
+        top: -50px;
+      }
+
       .dropdown-content a {
         color: black;
         padding: 16px 16px;
@@ -124,9 +128,10 @@
   z-index: 1;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out; /* Agrega transición para deslizamiento */
   max-height: 0; /* Altura máxima inicial es cero */
+  min-height: fit-content;
   overflow: hidden; /* Oculta contenido que sobrepase la altura */
   opacity: 0; /* Inicia con opacidad 0 */
-  bottom: 100%; /* Posiciona el menú justo encima del botón */
+  /* bottom: 100%; */
   left: 0; /* Alinea el menú desplegable con el lado izquierdo del botón */
 }
 .dropdown-content {
@@ -139,6 +144,7 @@
   z-index: 1;
   overflow: visible; /* Asegura que no haya desplazamiento */
   height: auto; /* Ajusta la altura según el contenido */
+  min-height: fit-content;
 }
 
 .dropdown:hover .dropdown-content {
@@ -148,7 +154,7 @@
 
 .dropdown:hover .dropdown-content {
   display: block; /* Muestra el desplegable */
-  max-height: 300px; /* Ajusta la altura máxima a la altura real del contenido */
+  max-height: 100px; /* Ajusta la altura máxima a la altura real del contenido */
   opacity: 1; /* Hace visible el contenido */
 }
 
@@ -167,7 +173,7 @@
   
       .modal-content {
         background-color: white;
-        margin: 15% auto;
+        margin: 20px auto;
         padding: 20px;
         border: 1px solid #888;
         width: 80%;
