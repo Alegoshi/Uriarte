@@ -67,8 +67,8 @@ rcUsuario.POSTregistro = async (req, res) => {
             return res.send('Error al encriptar la contraseña.');
         }
 
-        const sql = 'INSERT INTO register (usuario, correo_electronico, contraseña, confirmar_contraseña) VALUES (?, ?, ?, ?)';
-        db.query(sql, [usuario, email, hashedPassword, ''], (err, result) => {
+        const sql = 'INSERT INTO register (usuario, correo_electronico, contraseña) VALUES (?, ?, ?)';
+        db.query(sql, [usuario, email, hashedPassword], (err, result) => {
             if (err) {
                 console.error('Error al guardar el usuario: ' + err.message);
             }
